@@ -24,6 +24,8 @@ public class GunScript : MonoBehaviour
     public GameObject muzzleFlash;
     public TextMeshProUGUI text;
 
+    [SerializeField] LayerMask layermask;
+
     public bool allowInvoke = true;
 
 
@@ -33,12 +35,24 @@ public class GunScript : MonoBehaviour
         readyToShoot = true;
     }
 
-    private void Update()
+    void Update()
     {
         Debug.DrawRay(transform.position, transform.up * 50f, Color.red);
         text.SetText(bulletsShot + " / " + magazineSize);
         if (text != null)
             text.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 20f, layermask))
+        {
+            Debug.Log("Hit something");
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * hitinfo.distance, Color.green);
+        }
+        else
+        {
+            Debug.Log("Hit nothing");
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * 20f, Color.yellow);
+
+        }
+
     }
 
     public void ShootBullet()
@@ -53,6 +67,7 @@ public class GunScript : MonoBehaviour
 
     void Shoot()
     {
+        Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.up));
         RaycastHit hit;
 
         Vector3 targetPoint;
@@ -99,6 +114,7 @@ public class GunScript : MonoBehaviour
         //if more than one bulletsPerTap make sure to repeat shoot function
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
+
     }
 
     private void ResetShot()

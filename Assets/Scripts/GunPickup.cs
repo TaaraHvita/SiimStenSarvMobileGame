@@ -8,10 +8,14 @@ public class GunPickup : MonoBehaviour
     public GameObject gun;
     public Transform gunprefab;
     public Transform player, gunContainer;
-    public bool WepEquipped;
+    PlayerController PlayerController;
     [SerializeField] private Vector3 _rotation;
     public int bulletInventory;
 
+    void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -22,16 +26,17 @@ public class GunPickup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            
             GetGun();
+            GameObject gunPrefab = Instantiate(gun, gunContainer);
+            gunPrefab.transform.parent = GameObject.Find("Gun Container").transform;
             Destroy(this.gameObject);
         }
     }
 
     public void GetGun()
     {
-        WepEquipped = true;
         Debug.Log("Weapon GET!");
-        GameObject gunPrefab = Instantiate(gun, gunContainer);
-        gunPrefab.transform.parent = GameObject.Find("Gun Container").transform;
+
     }
 }

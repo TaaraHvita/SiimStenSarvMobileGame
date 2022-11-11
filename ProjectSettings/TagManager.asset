@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Shootable
   - Enemy
+  - Gun
+  - Ground
+  - Border
+  - Car
   layers:
   - Default
   - TransparentFX
@@ -18,7 +22,7 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
+  - Enemy
   - 
   - 
   - 

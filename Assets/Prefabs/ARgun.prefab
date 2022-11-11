@@ -240,11 +240,14 @@ MonoBehaviour:
   magazineSize: 10
   bulletsPerTap: 1
   allowButtonHold: 1
-  deleteMuzzleFlash: 1
+  deleteMuzzleFlash: 0.1
   attackPoint: {fileID: 3780991397937125236}
   bullet: {fileID: 6571927494580530507, guid: ec2e3d57c3f59a14e95f9361ba6f99b7, type: 3}
   muzzleFlash: {fileID: 2080474722879596353}
   text: {fileID: 6063448558416321508}
+  layermask:
+    serializedVersion: 2
+    m_Bits: 2048
   allowInvoke: 1
 --- !u!1 &6063448558416321511
 GameObject:

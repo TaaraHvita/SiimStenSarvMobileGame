@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public Vector3 hitPoint;
-    public float Deletebullet;
+    public int Deletebullet = 2;
     public int bulletSpeed;
 
     void Start()
@@ -23,9 +23,7 @@ public class BulletScript : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
-
-        Destroy(this.gameObject);
     }
 }

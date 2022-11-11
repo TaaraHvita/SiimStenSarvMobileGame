@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float moveSpeed;
 
-    public bool WepEquipped;
+    public bool WepEquipped = false;
 
 
     private void Start()
