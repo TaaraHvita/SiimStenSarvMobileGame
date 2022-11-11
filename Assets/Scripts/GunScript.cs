@@ -99,9 +99,6 @@ public class GunScript : MonoBehaviour
         if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
-        Debug.DrawRay(transform.position, transform.up * 50f, Color.red);
-
-
         bulletsLeft--;
         bulletsShot++;
 
