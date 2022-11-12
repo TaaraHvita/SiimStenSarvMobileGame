@@ -7,8 +7,6 @@ using TMPro;
 
 public class GunScript : MonoBehaviour
 {
-    
-    public int damage;
     public float shootForce, upwardForce, timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
@@ -31,14 +29,15 @@ public class GunScript : MonoBehaviour
 
     private void Awake()
     {
+        //make sure magazine size is full
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
 
-    void Update()
+    private void Update()
     {
         Debug.DrawRay(transform.position, transform.up * 50f, Color.red);
-        text.SetText(bulletsShot + " / " + magazineSize);
+        
         if (text != null)
             text.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out RaycastHit hitinfo, 20f, layermask))
@@ -53,6 +52,17 @@ public class GunScript : MonoBehaviour
 
         }
 
+        if (reloading)
+        {
+            return;
+        }
+
+        if (bulletsLeft <= 0)
+        {
+            StartCoroutine(Reload());
+            readyToShoot = false;
+        }
+
     }
 
     public void ShootBullet()
@@ -62,11 +72,13 @@ public class GunScript : MonoBehaviour
 
     public void WeaponReload()
     {
-        Reload();
+        StartCoroutine(Reload());
     }
 
     void Shoot()
     {
+        readyToShoot = false;
+
         Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.up));
         RaycastHit hit;
 
@@ -82,7 +94,6 @@ public class GunScript : MonoBehaviour
         //Calculate spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
-        float z = Random.Range(-spread, spread);
 
         //Calculate new direction with spread
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
@@ -121,9 +132,11 @@ public class GunScript : MonoBehaviour
         allowInvoke = true;
     }
 
-    private void Reload()
+    IEnumerator Reload()
     {
         reloading = true;
+        Debug.Log("Reloading...");
+        yield return new WaitForSeconds(reloadTime);
         Invoke("ReloadFinished", reloadTime);
     }
 

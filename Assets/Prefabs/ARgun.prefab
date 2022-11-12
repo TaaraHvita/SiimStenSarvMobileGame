@@ -229,18 +229,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a8e2e311da7404087ec80eae829592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   shootForce: 100
   upwardForce: 1
   timeBetweenShooting: 0.5
-  spread: 0
+  spread: 0.2
   range: 50
   reloadTime: 1
   timeBetweenShots: 1
-  magazineSize: 10
+  magazineSize: 20
   bulletsPerTap: 1
   allowButtonHold: 1
-  deleteMuzzleFlash: 0.1
+  deleteMuzzleFlash: 1
   attackPoint: {fileID: 3780991397937125236}
   bullet: {fileID: 6571927494580530507, guid: ec2e3d57c3f59a14e95f9361ba6f99b7, type: 3}
   muzzleFlash: {fileID: 2080474722879596353}

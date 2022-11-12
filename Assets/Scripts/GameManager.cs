@@ -6,22 +6,36 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    GameObject[] enemy;
+    GameObject[] Enemy;
     public int EnemyLeft;
     public bool LevelComplete = false;
     public TextMeshProUGUI EnemyCounter;
 
     private void Start()
     {
-        
+        if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            EnemyLeft++;
+        }
+        else
+        {
+            EnemyLeft--;
+        }
+
+        Enemy = GameObject.FindGameObjectsWithTag("Enemy");
+
+        for (int i = 0; i < 0; i++)
+        {
+            EnemyLeft++;
+        }
     }
     public void Update()
     {
-        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+
         //SetText
         EnemyCounter.SetText("Enemies left:" + EnemyLeft);
 
-        if (EnemyLeft <= 0)
+        if (EnemyLeft == 0)
         {
             LevelComplete = true;
             LevelCompleted();

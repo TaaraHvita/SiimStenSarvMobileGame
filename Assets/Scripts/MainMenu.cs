@@ -17,4 +17,12 @@ public class MainMenu : MonoBehaviour
         audioMixer.SetFloat("Volume", volume);
         Debug.Log(volume);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }

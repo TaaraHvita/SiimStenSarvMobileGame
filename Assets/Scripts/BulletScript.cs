@@ -17,9 +17,8 @@ public class BulletScript : MonoBehaviour
         if (collision.transform.tag == "Enemy")
         {
 
-            Destroy(collision.gameObject);
 
-            gameObject.SetActive(false);
+            Destroy(collision.gameObject);
             
         }
     }
