@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public Vector3 hitPoint;
-    public int Deletebullet = 2;
-    public int bulletSpeed;
+    public float Deletebullet = 2;
+    public int EnemyDamage;
 
-    void Start()
+    void Awake()
     {
-        this.GetComponent<Rigidbody>().AddForce((hitPoint - this.transform.position).normalized * bulletSpeed);
+        Destroy(gameObject, Deletebullet);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
-            Destroy(gameObject);
-            Destroy(this.gameObject);
+
+            Destroy(collision.gameObject);
+
+            gameObject.SetActive(false);
             
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 }

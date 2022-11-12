@@ -129,3 +129,4 @@ MonoBehaviour:
   hitPoint: {x: 0, y: 0, z: 0}
   Deletebullet: 2
   bulletSpeed: 2
+  EnemyDamage: 10
