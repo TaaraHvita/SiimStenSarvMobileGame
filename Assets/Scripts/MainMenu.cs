@@ -5,7 +5,11 @@ using UnityEngine.Audio;
 public class MainMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
     public void SetVolume (float volume)
     {
