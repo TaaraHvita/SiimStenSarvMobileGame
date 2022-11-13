@@ -1,29 +1,8 @@
 fileFormatVersion: 2
-guid: ce7a7cb4e8e68bf4ebb3d358332491e0
+guid: a91df12f6bceecf48a838f727cf42ce5
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 6542085382001888595
-    second: Armature|AnnaAction
-  - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
-  - first:
-      74: -8945691123924629249
-    second: Armature|Idle
-  - first:
-      74: -7551964380084998518
-    second: Armature|Run
-  - first:
-      74: 2126547105437587583
-    second: Armature|Shooting
-  - first:
-      74: -4779212398625334856
-    second: Armature|Tpose
-  - first:
-      74: -4183284580796988303
-    second: Armature|WorldAction
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -107,7 +86,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Anna
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -115,7 +94,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
