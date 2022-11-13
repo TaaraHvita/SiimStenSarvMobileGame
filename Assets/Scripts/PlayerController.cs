@@ -14,14 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float moveSpeed;
 
-    public bool WepEquipped = false;
-
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         Debug.Log(animator);
-        WepEquipped = false;
         
     }
 
