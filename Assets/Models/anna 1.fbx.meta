@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e57df3450907a68459c6af49e3a1c15a
+guid: ce7a7cb4e8e68bf4ebb3d358332491e0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -24,19 +24,7 @@ ModelImporter:
   - first:
       74: -4183284580796988303
     second: Armature|WorldAction
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: AnnaHair
-    second: {fileID: -7782784129561316892, guid: e57df3450907a68459c6af49e3a1c15a,
-      type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: AnnaMat
-    second: {fileID: -5980306681328094457, guid: e57df3450907a68459c6af49e3a1c15a,
-      type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -56,7 +44,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -119,13 +107,13 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Anna
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
