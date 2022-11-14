@@ -1383,8 +1383,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.73018867, g: 0.8603885, b: 1, a: 1}
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1497,6 +1497,7 @@ GameObject:
   - component: {fileID: 1412968781}
   - component: {fileID: 1412968782}
   - component: {fileID: 1412968783}
+  - component: {fileID: 1412968784}
   m_Layer: 0
   m_Name: ObstacleSpawner
   m_TagString: Untagged
@@ -1529,8 +1530,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.079172, y: 1.4405551, z: 5.8450427}
-  m_Center: {x: -0.17224693, y: -0.44547415, z: -0.16505122}
+  m_Size: {x: 6.079171, y: 1.4405551, z: 4.6549773}
+  m_Center: {x: -0.17224692, y: -0.44547415, z: 0.42998153}
 --- !u!114 &1412968782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,7 +1550,7 @@ MonoBehaviour:
   minX: -0.5
   maxY: 0.2
   minY: -3
-  timeBetweenSpawn: 5
+  timeBetweenSpawn: 35
 --- !u!114 &1412968783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,7 +1569,26 @@ MonoBehaviour:
   minX: -0.5
   maxY: 0.2
   minY: -3
-  timeBetweenSpawn: 2
+  timeBetweenSpawn: 7
+--- !u!114 &1412968784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412968779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c7b6a875fa8424391fc3b28fb91cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 5430756977342412946, guid: 873aad19e1c2fbe40a3956aceb33ba75,
+    type: 3}
+  maxX: 1.5
+  minX: -0.5
+  maxY: 0.2
+  minY: -3
+  timeBetweenSpawn: 12
 --- !u!1 &1733034347
 GameObject:
   m_ObjectHideFlags: 0
