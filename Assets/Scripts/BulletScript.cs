@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public GameObject hitEffect;
     public float Deletebullet = 2;
     public int EnemyDamage;
 
