@@ -18,10 +18,6 @@ public class GameManager : MonoBehaviour
         {
             EnemyLeft++;
         }
-        else
-        {
-            EnemyLeft--;
-        }
 
         Enemy = GameObject.FindGameObjectsWithTag("Enemy");
 
