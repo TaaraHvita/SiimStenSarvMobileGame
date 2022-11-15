@@ -42,12 +42,11 @@ public class GunScript : MonoBehaviour
             text.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out RaycastHit hitinfo, 20f, layermask))
         {
-            Debug.Log("Hit something");
+            
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * hitinfo.distance, Color.green);
         }
         else
         {
-            Debug.Log("Hit nothing");
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * 20f, Color.yellow);
 
         }

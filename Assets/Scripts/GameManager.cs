@@ -20,11 +20,6 @@ public class GameManager : MonoBehaviour
         }
 
         Enemy = GameObject.FindGameObjectsWithTag("Enemy");
-
-        for (int i = 0; i < 0; i++)
-        {
-            EnemyLeft++;
-        }
     }
 
 

@@ -37,4 +37,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("idle", true);
         }
     }
+
+    public void Attack()
+    {
+        Debug.Log("Attack");
+        animator.SetTrigger("isShooting");
+    }
 }
