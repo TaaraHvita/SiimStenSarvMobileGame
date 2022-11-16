@@ -7,27 +7,28 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    GameObject[] Enemy;
-    public int EnemyLeft;
+    int[] enemiesLeft;
+    int _enemy;
+    int EnemyLeft;
     public bool LevelComplete = false;
     public TextMeshProUGUI EnemyCounter;
 
     private void Start()
     {
-        if (GameObject.FindGameObjectWithTag("Enemy"))
+        foreach (int _enemy in enemiesLeft)
         {
+            GameObject.FindGameObjectWithTag("Enemy");
             EnemyLeft++;
-        }
+            Debug.Log("Enemy Found");
+            //SetText
+            EnemyCounter.SetText("Enemies left:" + enemiesLeft);
 
-        Enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        }    
     }
 
 
     public void Update()
     {
-
-        //SetText
-        EnemyCounter.SetText("Enemies left:" + EnemyLeft);
 
         if (EnemyLeft == 0)
         {

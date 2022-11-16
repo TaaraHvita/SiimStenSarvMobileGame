@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] 
     private float moveSpeed;
 
+    float playerHealth;
+
     private void Start()
     {
         animator = GetComponent<Animator>();

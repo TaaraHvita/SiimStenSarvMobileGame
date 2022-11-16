@@ -6,7 +6,6 @@ using TMPro;
 public class GunPickup : MonoBehaviour
 {
     public GameObject gun;
-    public Transform gunprefab;
     public Transform player, gunContainer;
     PlayerController PlayerController;
     [SerializeField] private Vector3 _rotation;
