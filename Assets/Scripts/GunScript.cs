@@ -66,7 +66,11 @@ public class GunScript : MonoBehaviour
 
     public void ShootBullet()
     {
-        Shoot();
+        if(bulletsLeft != 0)
+        {
+            Shoot();
+        }
+        
     }
 
     public void WeaponReload()
