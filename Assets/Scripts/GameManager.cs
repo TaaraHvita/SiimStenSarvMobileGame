@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,44 +8,49 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] enemiesLeft;
-    //int _enemy;
-    int EnemyLeft;
+    public int Count;
     public bool LevelComplete = false;
     public TextMeshProUGUI EnemyCounter;
+    List<EnemyController> enemies = new List<EnemyController>();
 
-    private void Start()
+
+    private void OnEnable()
     {
-        enemyCounter();
+        EnemyController.OnEnemyKilled += EnemyDefeated;
     }
 
-
-    public void Update()
+    private void OnDisable()
     {
-        if (EnemyLeft == 0)
-        {
+        EnemyController.OnEnemyKilled -= EnemyDefeated;
+    }
+
+    private void Awake()
+    {
+        enemies = GameObject.FindObjectsOfType<EnemyController>().ToList();
+        UpdateEnemiesLeft();
+
+    }
+
+    void EnemyDefeated(EnemyController enemy)
+    {
+        if(enemies.Remove(enemy));
+        UpdateEnemiesLeft();
+    }
+    void UpdateEnemiesLeft()
+    {
+        EnemyCounter.text = $"Enemies Left: {enemies.Count}";
+        Debug.Log("Enemy Found");
+    }
+
+    void Update()
+    {
+        if (enemies.Count == 0){
             LevelComplete = true;
-            LevelCompleted();
+            EnemyCounter.text = $"Level Complete!";
         }
-        else LevelComplete = false;
+        LevelComplete = false;
     }
 
-    public void enemyCounter()
-    {
-        enemiesLeft = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject _enemy in enemiesLeft)
-        {
-            EnemyLeft++;
-            Debug.Log("Enemy Found");
-        }
-        EnemyCounter.SetText("Enemies left:" + EnemyLeft);
-    }
-
-
-    void LevelCompleted()
-    {
-        EnemyCounter.SetText("LEVEL COMPLETE! Find Exit!");
-    }
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

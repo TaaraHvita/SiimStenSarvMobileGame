@@ -15,13 +15,9 @@ public class BulletScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Enemy")
+        if(collision.gameObject.TryGetComponent<EnemyController>(out EnemyController enemyComponent))
         {
-            
-        }
-        else
-        {
-            Destroy(this.gameObject);
+            enemyComponent.TakeDamage(1);
         }
     }
 }

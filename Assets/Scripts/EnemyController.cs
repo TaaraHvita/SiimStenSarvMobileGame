@@ -1,12 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    public NavMeshAgent agent;
     public Transform player;
     public LayerMask isPlayer;
-    public float health = 5;
+    public LayerMask Ground;
+    public float health, maxHealth = 3;
+
+    public static event Action<EnemyController> OnEnemyKilled;
+
+    //Attacking
+    public float timeBetweenAttacks;
+
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -15,43 +25,41 @@ public class EnemyController : MonoBehaviour
     {
         player = GameObject.Find("anna").transform;
     }
+
+    private void Start()
+    {
+        health = maxHealth;
+    }
     void Update()
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, isPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, isPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
     }
 
-    private void Patrolling()
-    {
-
-    }
-
     private void ChasePlayer()
     {
-
+        agent.SetDestination(player.position);
     }
 
     private void AttackPlayer()
     {
+        agent.SetDestination(transform.position);
 
+        transform.LookAt(player);
     }
 
-    private void TakeDamage()
+    public void TakeDamage(float damageAmount)
     {
-        health--;
-        if(health == 0)
+        health -= damageAmount;
+        if(health <= 0)
         {
-            Die();
+            Destroy(gameObject);
+            OnEnemyKilled?.Invoke(this);
+            Debug.Log("Enemy killed");
         }
-    }
-
-    public void Die()
-    {
-        Debug.Log("Enemy killed");
     }
 
     private void OnDrawGizmosSelected()
