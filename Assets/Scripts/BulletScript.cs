@@ -17,10 +17,11 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-
-
-            Destroy(collision.gameObject);
             
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 }

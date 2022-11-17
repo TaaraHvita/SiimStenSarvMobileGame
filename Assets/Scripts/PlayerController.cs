@@ -8,19 +8,34 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
     [SerializeField]
-    private FixedJoystick joyStick;
+    private Joystick joyStick;
     [SerializeField]
     private Animator animator;
     [SerializeField] 
     private float moveSpeed;
 
-    float playerHealth;
+    public GameObject GameOverMenu;
+    public float health;
+    public Slider HealthBar;
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     private void Start()
     {
+        HealthBar.value = health;
         animator = GetComponent<Animator>();
         Debug.Log(animator);
         
+    }
+
+    private void Update()
+    {
+        if(health == 0)
+        {
+            Die();
+        }
     }
 
     private void FixedUpdate()
@@ -44,5 +59,28 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Attack");
         animator.SetTrigger("isShooting");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer.Equals(11))
+        {
+            health -= 10;
+            HealthBar.value = health;
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("You're dead");
+        Destroy(gameObject);
+        Time.timeScale = 0f;
+        EnableGameOverMenu();
+        
+    }
+
+    public void EnableGameOverMenu()
+    {
+        GameOverMenu.SetActive(true);
     }
 }

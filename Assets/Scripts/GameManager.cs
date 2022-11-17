@@ -7,29 +7,20 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    int[] enemiesLeft;
-    int _enemy;
+    public GameObject[] enemiesLeft;
+    //int _enemy;
     int EnemyLeft;
     public bool LevelComplete = false;
     public TextMeshProUGUI EnemyCounter;
 
     private void Start()
     {
-        foreach (int _enemy in enemiesLeft)
-        {
-            GameObject.FindGameObjectWithTag("Enemy");
-            EnemyLeft++;
-            Debug.Log("Enemy Found");
-            //SetText
-            EnemyCounter.SetText("Enemies left:" + enemiesLeft);
-
-        }    
+        enemyCounter();
     }
 
 
     public void Update()
     {
-
         if (EnemyLeft == 0)
         {
             LevelComplete = true;
@@ -38,8 +29,24 @@ public class GameManager : MonoBehaviour
         else LevelComplete = false;
     }
 
+    public void enemyCounter()
+    {
+        enemiesLeft = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject _enemy in enemiesLeft)
+        {
+            EnemyLeft++;
+            Debug.Log("Enemy Found");
+        }
+        EnemyCounter.SetText("Enemies left:" + EnemyLeft);
+    }
+
+
     void LevelCompleted()
     {
         EnemyCounter.SetText("LEVEL COMPLETE! Find Exit!");
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

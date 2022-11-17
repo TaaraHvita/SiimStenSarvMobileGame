@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public Transform player;
     public LayerMask isPlayer;
+    public float health = 5;
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -37,6 +38,20 @@ public class EnemyController : MonoBehaviour
     private void AttackPlayer()
     {
 
+    }
+
+    private void TakeDamage()
+    {
+        health--;
+        if(health == 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Debug.Log("Enemy killed");
     }
 
     private void OnDrawGizmosSelected()
