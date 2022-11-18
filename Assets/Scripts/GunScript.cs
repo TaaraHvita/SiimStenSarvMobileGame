@@ -11,7 +11,6 @@ public class GunScript : MonoBehaviour
     public int magazineSize, bulletsPerTap;
     public bool allowButtonHold;
     int bulletsLeft, bulletsShot;
-    public float deleteMuzzleFlash;
 
     bool shooting, readyToShoot, reloading;
 
