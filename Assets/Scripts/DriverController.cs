@@ -8,7 +8,7 @@ public class DriverController : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
     [SerializeField]
-    private FixedJoystick joyStick;
+    private Joystick joyStick;
     [SerializeField]
     private float altitude;
 

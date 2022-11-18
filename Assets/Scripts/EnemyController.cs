@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     public LayerMask isPlayer;
     public LayerMask Ground;
     public float health, maxHealth = 3;
+    private Animator enemyAnimator;
 
     public static event Action<EnemyController> OnEnemyKilled;
 
@@ -24,6 +25,7 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("anna").transform;
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Start()
@@ -42,6 +44,8 @@ public class EnemyController : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        enemyAnimator.SetBool("isWalking", true);
+        enemyAnimator.SetBool("idle", false);
     }
 
     private void AttackPlayer()
@@ -49,6 +53,8 @@ public class EnemyController : MonoBehaviour
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
+
+        enemyAnimator.SetTrigger("isAttacking");
     }
 
     public void TakeDamage(float damageAmount)

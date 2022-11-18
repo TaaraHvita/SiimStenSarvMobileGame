@@ -23,6 +23,7 @@ public class GunScript : MonoBehaviour
     public TextMeshProUGUI text;
 
     [SerializeField] LayerMask layermask;
+    public AudioSource gunshotaudio;
 
     public bool allowInvoke = true;
 
@@ -112,6 +113,9 @@ public class GunScript : MonoBehaviour
         //create muzzleflash
         if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        //create audio
+        if (gunshotaudio != null)
+            Instantiate(gunshotaudio);
 
         bulletsLeft--;
         bulletsShot++;

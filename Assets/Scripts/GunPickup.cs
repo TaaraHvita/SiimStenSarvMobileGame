@@ -11,11 +11,6 @@ public class GunPickup : MonoBehaviour
     [SerializeField] private Vector3 _rotation;
     public int bulletInventory;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         transform.Rotate(_rotation * Time.deltaTime);
