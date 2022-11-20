@@ -83,4 +83,10 @@ public class PlayerController : MonoBehaviour
     {
         GameOverMenu.SetActive(true);
     }
+
+    public void Heal(float amount)
+    {
+        health += amount;
+        HealthBar.value = health;
+    }
 }

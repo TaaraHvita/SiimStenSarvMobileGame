@@ -20,17 +20,11 @@ public class GunPickup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            
-            GetGun();
+
+            Debug.Log("Weapon GET!");
             GameObject gunPrefab = Instantiate(gun, gunContainer);
             gunPrefab.transform.parent = GameObject.Find("Gun Container").transform;
             Destroy(this.gameObject);
         }
-    }
-
-    public void GetGun()
-    {
-        Debug.Log("Weapon GET!");
-
     }
 }
