@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Loading level...");
             LoadNextLevel();
         }
     }
