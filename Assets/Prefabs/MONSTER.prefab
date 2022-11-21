@@ -594,6 +594,8 @@ MonoBehaviour:
   health: 5
   maxHealth: 3
   timeBetweenAttacks: 0
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
   sightRange: 3
   attackRange: 0.5
   playerInSightRange: 0
