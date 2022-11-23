@@ -486,6 +486,7 @@ MonoBehaviour:
   Count: 0
   LevelComplete: 0
   EnemyCounter: {fileID: 1182776472604111779}
+  _endCube: {fileID: 2833406161376165170}
 --- !u!4 &263489218
 Transform:
   m_ObjectHideFlags: 0
@@ -6064,6 +6065,7 @@ MonoBehaviour:
   Count: 0
   LevelComplete: 0
   EnemyCounter: {fileID: 0}
+  _endCube: {fileID: 0}
 --- !u!4 &7718180678833246971
 Transform:
   m_ObjectHideFlags: 0

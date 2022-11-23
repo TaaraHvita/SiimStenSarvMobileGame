@@ -3597,6 +3597,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed9465f69b7fd4418d054870ceaafc8, type: 3}
+--- !u!1 &887218726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2833406160918822108, guid: 305aed3061d6c064298d3f1c515b1e9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2833406161502859531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &895694249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7100692236508526520, guid: e1d8d405d5919704cb3734596e00253f,
@@ -10569,6 +10575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndCube
       objectReference: {fileID: 0}
+    - target: {fileID: 2833406160918822108, guid: 305aed3061d6c064298d3f1c515b1e9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305aed3061d6c064298d3f1c515b1e9e, type: 3}
 --- !u!1001 &6750605187607232522
@@ -10712,6 +10723,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7718180677970646225, guid: 0b8a614662868034c9e7fecc1b829de5,
+        type: 3}
+      propertyPath: _endCube
+      value: 
+      objectReference: {fileID: 887218726}
     - target: {fileID: 7718180677970646225, guid: 0b8a614662868034c9e7fecc1b829de5,
         type: 3}
       propertyPath: EnemyCounter

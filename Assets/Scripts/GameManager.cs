@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int Count;
     public bool LevelComplete = false;
     public TextMeshProUGUI EnemyCounter;
+    public GameObject _endCube;
     List<EnemyController> enemies = new List<EnemyController>();
 
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         enemies = GameObject.FindObjectsOfType<EnemyController>().ToList();
         UpdateEnemiesLeft();
+        _endCube.SetActive(false);
 
     }
 
@@ -47,8 +49,10 @@ public class GameManager : MonoBehaviour
         if (enemies.Count == 0){
             LevelComplete = true;
             EnemyCounter.text = $"Level Complete!";
+            _endCube.SetActive(true);
         }
         LevelComplete = false;
+        
     }
 
     public void Restart()
