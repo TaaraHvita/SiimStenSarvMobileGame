@@ -18,7 +18,7 @@ public class GunScript : MonoBehaviour
     private Ray ray;
     public RaycastHit rayHit;
     public GameObject bullet;
-    public GameObject muzzleFlash;
+    public ParticleSystem muzzleFlash;
     public TextMeshProUGUI text;
 
     [SerializeField] LayerMask layermask;
@@ -110,11 +110,9 @@ public class GunScript : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(attackPoint.transform.up * upwardForce, ForceMode.Impulse);
         //create muzzleflash
-        if (muzzleFlash != null)
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        muzzleFlash.Play();
         //create audio
-        if (gunshotaudio != null)
-            Instantiate(gunshotaudio);
+        gunshotaudio.Play();
 
         bulletsLeft--;
         bulletsShot++;
