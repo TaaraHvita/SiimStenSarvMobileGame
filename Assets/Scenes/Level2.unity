@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -370,7 +370,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 6aa1ed263d88dee4ea43d3b371b0f79a,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: c5afd660173975b43b2890b41112e4af, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aba998e466e122b418b7ce8279de58ef, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1103,7 +1103,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6abe7279ead966478d475f5eb52bdc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -385.71307
+      value: -385.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6abe7279ead966478d475f5eb52bdc6,
         type: 3}
@@ -1922,6 +1922,7 @@ GameObject:
   - component: {fileID: 1412968782}
   - component: {fileID: 1412968783}
   - component: {fileID: 1412968784}
+  - component: {fileID: 1412968785}
   m_Layer: 0
   m_Name: ObstacleSpawner
   m_TagString: Untagged
@@ -2009,6 +2010,25 @@ MonoBehaviour:
   obstacle: {fileID: 5430756977342412946, guid: 873aad19e1c2fbe40a3956aceb33ba75,
     type: 3}
   maxX: 1.5
+  minX: -0.5
+  maxY: 0.2
+  minY: -3
+  timeBetweenSpawn: 12
+--- !u!114 &1412968785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412968779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c7b6a875fa8424391fc3b28fb91cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 8205784238111033339, guid: f2e8dc558848dce40ad4c277d479660d,
+    type: 3}
+  maxX: 1.9
   minX: -0.5
   maxY: 0.2
   minY: -3
