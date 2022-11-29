@@ -64,9 +64,14 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer.Equals(11))
         {
-            health -= 10;
-            HealthBar.value = health;
+            TakeDamage();
         }
+    }
+
+    public void TakeDamage()
+    {
+        health -= 5;
+        HealthBar.value = health;
     }
 
     void Die()

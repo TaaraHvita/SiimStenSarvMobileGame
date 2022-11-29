@@ -690,6 +690,50 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 514433826}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &551016132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 551016133}
+  - component: {fileID: 551016134}
+  m_Layer: 0
+  m_Name: DestroyBarrier (1)
+  m_TagString: Border
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &551016133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551016132}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -19.78, y: -0.38, z: 7.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 649477624}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &551016134
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551016132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0038264, y: 15.142725, z: 23.78214}
+  m_Center: {x: 1.3302659e-14, y: -1.4909391, z: 2.936091}
 --- !u!1 &553266404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1096,8 @@ Transform:
   m_Children:
   - {fileID: 1412968780}
   - {fileID: 2070580835}
+  - {fileID: 551016133}
+  - {fileID: 795613604}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1440,6 +1486,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2573072, y: 1, z: 2.0312715}
   m_Center: {x: 0.041397672, y: 0, z: 0.052623272}
+--- !u!1 &795613603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795613604}
+  - component: {fileID: 795613605}
+  m_Layer: 0
+  m_Name: DestroyBarrier (2)
+  m_TagString: Border
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &795613604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795613603}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -19.78, y: -0.38, z: -5.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 649477624}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &795613605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795613603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0038264, y: 15.142725, z: 23.78214}
+  m_Center: {x: 1.3302659e-14, y: -1.4909391, z: 2.936091}
 --- !u!1 &801552649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,9 +2061,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 7787801610512242500, guid: 8bfa136d4cd10d94bb9e4d5d55890e8a,
     type: 3}
-  maxX: 1.5
+  maxX: 2.5
   minX: -0.5
-  maxY: 0.2
+  maxY: 2
   minY: -3
   timeBetweenSpawn: 35
 --- !u!114 &1412968783
@@ -1990,7 +2080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 4387237964940692722, guid: 144444683e92238429eb782fdd18a806,
     type: 3}
-  maxX: 1.5
+  maxX: 2.5
   minX: -0.5
   maxY: 0.2
   minY: -3
@@ -2011,7 +2101,7 @@ MonoBehaviour:
     type: 3}
   maxX: 1.5
   minX: -0.5
-  maxY: 0.2
+  maxY: 2
   minY: -3
   timeBetweenSpawn: 12
 --- !u!114 &1412968785
@@ -2028,9 +2118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 8205784238111033339, guid: f2e8dc558848dce40ad4c277d479660d,
     type: 3}
-  maxX: 1.9
+  maxX: 2.5
   minX: -0.5
-  maxY: 0.2
+  maxY: 2
   minY: -3
   timeBetweenSpawn: 12
 --- !u!1 &1733034347

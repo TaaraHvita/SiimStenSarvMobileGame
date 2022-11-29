@@ -593,11 +593,9 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
-    type: 3}
-  sightRange: 3
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  sightRange: 5
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &6750605187773800717
@@ -785,9 +783,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3468518021515020669}
+  - component: {fileID: 6152478947693459758}
   m_Layer: 11
   m_Name: Bone.005_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,12 +799,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8052530331505866103}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.0071763447, z: 0}
+  m_LocalPosition: {x: 0.0007, y: 0.00698, z: -0.49488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 526343892723635142}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6152478947693459758
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8052530331505866103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0044248127
+  m_Center: {x: 0.000002255492, y: 0.00000027079756, z: 0.49558848}
 --- !u!1 &8125253407467406737
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,9 +827,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643082839805572332}
+  - component: {fileID: 3238452534118015568}
   m_Layer: 11
   m_Name: Bone.008_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,12 +843,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8125253407467406737}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.0064365896, z: 0}
+  m_LocalPosition: {x: -0.00089, y: 0.00732, z: -0.49563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3607423814288402570}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &3238452534118015568
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125253407467406737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.004424813
+  m_Center: {x: 0.0000021063674, y: 0.0000003043779, z: 0.49689767}
 --- !u!1 &9055873907301813065
 GameObject:
   m_ObjectHideFlags: 0

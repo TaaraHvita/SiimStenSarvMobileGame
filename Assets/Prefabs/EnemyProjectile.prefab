@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7528663631701544306}
   - component: {fileID: 327686078092747189}
   - component: {fileID: 5420221910771984788}
-  - component: {fileID: -8240290848150810237}
+  - component: {fileID: 1739470317546293019}
   m_Layer: 0
   m_Name: EnemyProjectile
   m_TagString: Enemy
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &-8240290848150810237
+--- !u!114 &1739470317546293019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,9 +122,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 117477175464752742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afec1e2463c8e1744af36a8771f06eaf, type: 3}
+  m_Script: {fileID: 11500000, guid: bcc667883842d7d4f9c9718c32b3a0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 0}
-  Deletebullet: 2
-  EnemyDamage: 3
+  Deletebullet: 0.1

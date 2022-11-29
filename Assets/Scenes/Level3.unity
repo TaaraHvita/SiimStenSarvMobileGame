@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -381,10 +381,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &108631645
@@ -973,10 +974,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &269588455
@@ -1482,10 +1484,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &473686735
@@ -2158,10 +2161,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &620698125
@@ -2432,10 +2436,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &689129438
@@ -3341,10 +3346,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &880211763
@@ -4937,10 +4943,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &1114394623
@@ -5702,10 +5709,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!65 &1196975523
@@ -5821,10 +5829,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 5
   maxHealth: 3
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 4
-  attackRange: 0.5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 117477175464752742, guid: c7968a5beeefcac458bc5070f00c2086,
+    type: 3}
+  sightRange: 6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &1302091745
@@ -21290,7 +21299,12 @@ PrefabInstance:
     - target: {fileID: 6750605187773800713, guid: 618c3be75e8a6944f87dd202fe25e2f5,
         type: 3}
       propertyPath: sightRange
-      value: 4
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750605187773800713, guid: 618c3be75e8a6944f87dd202fe25e2f5,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6750605187773800717, guid: 618c3be75e8a6944f87dd202fe25e2f5,
         type: 3}
