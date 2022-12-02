@@ -6729,7 +6729,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527880760}
-  m_Text: "My UI needs time to \nrestart. Better get to my car"
+  m_Text: "My UI needs time to \nrestart. Better get to my car.\nThe blue one."
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -7651,7 +7651,7 @@ TextMesh:
   m_GameObject: {fileID: 2009490008}
   m_Text: 'Game by - Siim Sten Sarv
 
-    Music by alice.skyhart
+    Music by ALICE SKYHART
 
 '
   m_OffsetZ: 0
@@ -7715,13 +7715,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009490008}
-  m_LocalRotation: {x: 0.023977257, y: 0.34211677, z: 0.053737935, w: 0.93781316}
-  m_LocalPosition: {x: 34.89171, y: 27.919235, z: -25.531614}
+  m_LocalRotation: {x: 0.010048023, y: 0.3428087, z: 0.015564933, w: 0.9392226}
+  m_LocalPosition: {x: 34.994534, y: 28.585712, z: -25.611084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 420176039}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.47, y: 40.112, z: 6.731}
+  m_LocalEulerAnglesHint: {x: 0.47, y: 40.112, z: 2.07}
 --- !u!1 &2057231792
 GameObject:
   m_ObjectHideFlags: 0
